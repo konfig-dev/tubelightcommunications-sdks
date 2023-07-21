@@ -1,0 +1,500 @@
+examples: {}
+examples_2: {}
+ignorePotentialIncorrectType: true
+nonExistentSecurityMapping: {}
+operationIds:
+  /2FA/auth/jwt/create/:
+    post: 2Fa_create
+  /2FA/auth/jwt/refresh/:
+    post: 2Fa_refresh
+  /2FA/auth/jwt/verify/:
+    post: 2Fa_verify
+  /2FA/v1/auth/token/:
+    post: 2Fa_token
+  /2FA/v1/customer/:
+    get: 2Fa_getOtpConfiguration
+    post: 2Fa_saveOtpConfiguration
+    put: 2Fa_updateOtpConfiguration
+  /2FA/v1/my-channel/:
+    get: 2Fa_getChannelConfiguration
+    post: 2Fa_saveChannelConfiguration
+    put: 2Fa_updateChannelConfiguration
+  /2FA/v1/send-notification/:
+    post: 2Fa_sendNotification
+  /2FA/v1/send-otp/:
+    post: 2Fa_sendOtp
+  /2FA/v1/send-otp/{otp_channel}/:
+    post: 2Fa_sendChanneledOtp
+  /2FA/v1/template/:
+    delete: 2Fa_deleteTemplates
+    get: 2Fa_getTemplates
+    post: 2Fa_saveTemplates
+    put: 2Fa_updateTemplates
+  /2FA/v1/verify-otp/:
+    post: 2Fa_verifyOtp
+  /api/authentication/login:
+    post: Sms_login
+  /api/authentication/webhook:
+    post: Email_response
+  /auth/jwt/create/:
+    post: Rcs_create
+  /auth/jwt/refresh/:
+    post: Rcs_refresh
+  /auth/jwt/verify/:
+    post: Rcs_verify
+  /auth/token/login/:
+    post: Rcs_login
+  /auth/token/logout/:
+    post: Rcs_logout
+  /email/api/v1/dashboard/hour/{id}:
+    post: Email_hourlySms
+  /email/api/v1/reporting/download/{id}:
+    get: Email_downloadMethod
+  /email/api/v1/reporting/{id}:
+    post: Email_reporting
+  /email/api/v1/send/{id}:
+    post: Email_sent
+  /email/api/v1/summary/download/{id}:
+    get: Email_summaryMethod
+  /email/api/v1/summary/{id}:
+    post: Email_summary
+  /rcs/api/v1/add/webhook/:
+    post: Rcs_addWebhook
+  /rcs/api/v1/analytics/:
+    get: Rcs_analytics
+  /rcs/api/v1/bulk-cap-check/:
+    post: Rcs_capability
+  /rcs/api/v1/check-capability/{phone_number}/:
+    post: Rcs_createCapability
+  /rcs/api/v1/dashboard/:
+    post: Rcs_createDashboard
+  /rcs/api/v1/delete/{message_type}/:
+    post: Rcs_deleteTemplate
+  /rcs/api/v1/invite-tester/{phone_number}/:
+    post: Rcs_sendTesterInvitation
+  /rcs/api/v1/pause-bulk/:
+    post: Rcs_pauseCampaign
+  /rcs/api/v1/resume-bulk/:
+    post: Rcs_resumeCampaign
+  /rcs/api/v1/save/carousel/:
+    post: Rcs_saveCaoursel
+  /rcs/api/v1/save/file/:
+    post: Rcs_saveFile
+  /rcs/api/v1/save/rich_card/:
+    post: Rcs_saveRichCardTemplate
+  /rcs/api/v1/save/simple_message/:
+    post: Rcs_saveSimpleMessage
+  /rcs/api/v1/send-bulk/{message_type}/:
+    post: Rcs_sendBulkMessage
+  /rcs/api/v1/send-direct/:
+    post: Rcs_sendCustomMessage
+  /rcs/api/v1/send-event/:
+    post: Rcs_sendEvents
+  /rcs/api/v1/send/{message_type}/:
+    post: Rcs_sendMessage
+  /rcs/api/v1/view/campaign-summary/:
+    get: Rcs_listCampaignSummary
+  /rcs/api/v1/view/carousel/:
+    get: Rcs_listCarousels
+  /rcs/api/v1/view/conversation/:
+    get: Rcs_listUserConversations
+  /rcs/api/v1/view/file/:
+    get: Rcs_listFileMessage
+  /rcs/api/v1/view/received-messages/:
+    get: Rcs_listReceivedMessage
+  /rcs/api/v1/view/rich_card/:
+    get: Rcs_listRichCards
+  /rcs/api/v1/view/sent-messages/:
+    get: Rcs_listSentMessages
+  /rcs/api/v1/view/simple_message/:
+    get: Rcs_listSimpleMessages
+  /sms/api/v1/Schedule/bulkjob:
+    post: Sms_scheduleBulkJob
+  /sms/api/v1/accounting:
+    post: Sms_profileAccounting
+  /sms/api/v1/accounting/update:
+    put: Sms_updateAccountProfile
+  /sms/api/v1/balance:
+    post: Sms_getMoney
+  /sms/api/v1/block/retrieve/numbers:
+    post: Sms_blockMultipleRetreivingNumber
+  /sms/api/v1/block/upload/numbers:
+    post: Sms_blockMultipleNumber
+  /sms/api/v1/bulk/job/download:
+    get: Sms_getBulkJob
+  /sms/api/v1/bulk/template:
+    post: Sms_bulkTemplateMode
+  /sms/api/v1/bulkjob:
+    post: Sms_bulkJob
+  /sms/api/v1/center/download:
+    get: Sms_downloadCenter
+  /sms/api/v1/count/sms/all/sender:
+    post: Sms_countSmsAllSender
+  /sms/api/v1/credit/logs:
+    post: Sms_creditLogs
+  /sms/api/v1/credit/logs/download:
+    get: Sms_getCreditLogs
+  /sms/api/v1/dashboard/hour/sms:
+    post: Sms_hourlySms
+  /sms/api/v1/dashboard/sms:
+    post: Sms_countSmsAllSenders
+  /sms/api/v1/date/statistic:
+    post: Sms_datewiseStatistic
+  /sms/api/v1/descriptive/summary:
+    post: Sms_descriptiveSummary
+  /sms/api/v1/download/center:
+    post: Sms_downloadCentre
+  /sms/api/v1/jobsummary:
+    post: Sms_jobsSummary
+  /sms/api/v1/mobile/logs:
+    post: Sms_mobileLogs
+  /sms/api/v1/month/statistic:
+    post: Sms_monthlyStatistic
+  /sms/api/v1/personalize/upload:
+    post: Sms_personalizeUploadFile
+  /sms/api/v1/profile:
+    post: Sms_profileDetail
+  /sms/api/v1/retreive/download/center:
+    post: Sms_retrieveDownloadCenter
+  /sms/api/v1/schedule/job/download:
+    get: Sms_scheduleJob
+  /sms/api/v1/sender/block:
+    post: Sms_blockSender
+  /sms/api/v1/sender/manage:
+    post: Sms_manageSender
+  /sms/api/v1/sender/statistic:
+    post: Sms_senderStatistic
+  /sms/api/v1/sms/log/download:
+    get: Sms_log
+  /sms/api/v1/smslog:
+    post: Sms_logd
+  /sms/api/v1/summary/datewise/download:
+    get: Sms_datewiseSummary
+  /sms/api/v1/summary/job/download:
+    get: Sms_jobSummary
+  /sms/api/v1/summary/monthly/download:
+    get: Sms_monthlySummary
+  /sms/api/v1/summary/sender/download:
+    get: Sms_senderSummary
+  /sms/api/v1/update/profile:
+    put: Sms_updateProfileDetails
+  /sms/api/v1/upload:
+    post: Sms_uploadFile
+  /sms/api/v1/websms/multiple:
+    post: Sms_countDatewiseSender
+  /sms/api/v1/websms/personalize:
+    post: Sms_sendPersonalizedMessage
+  /sms/api/v1/websms/retrieve/template:
+    post: Sms_retrieveTemplate
+  /sms/api/v1/websms/retrieve/template/delete:
+    delete: Sms_deleteTemplate
+  /sms/api/v1/websms/single:
+    post: Sms_single
+  /sms/api/v1/websms/template:
+    post: Sms_sendTemplate
+  /whatsapp/api/v1/blacklist:
+    post: Whatsapp_blacklist
+  /whatsapp/api/v1/dashboard:
+    post: Whatsapp_summarizeService
+  /whatsapp/api/v1/hour/dashboard:
+    post: Whatsapp_summaryMonthService
+  /whatsapp/api/v1/optout:
+    delete: Whatsapp_optout
+  /whatsapp/api/v1/report:
+    post: Whatsapp_reporting
+  /whatsapp/api/v1/retreive/template:
+    post: Whatsapp_retreivingTemplate
+  /whatsapp/api/v1/single:
+    post: Whatsapp_send
+  /whatsapp/api/v1/summary:
+    post: Whatsapp_summaryService
+  /whatsapp/api/v1/summary/monthly/download:
+    get: Whatsapp_bulkJob
+  /whatsapp/api/v1/whatsapp/log/download:
+    get: Whatsapp_logs
+operationTags: {}
+renameTags: {}
+requestSchemaNames:
+  /api/authentication/webhook:
+    post:
+      application/json: EmailResponseRequest
+  /sms/api/v1/block/upload/numbers:
+    post:
+      application/json: SmsBlockMultipleNumberRequest
+  /sms/api/v1/bulk/template:
+    post:
+      application/json: SmsBulkTemplateModeRequest
+  /sms/api/v1/personalize/upload:
+    post:
+      application/json: SmsPersonalizeUploadFileRequest
+  /sms/api/v1/upload:
+    post:
+      application/json: SmsUploadFileRequest
+  /v1/cpaas/calls/callAndPark:
+    post:
+      application/json: CallingControllerCallAndParkRequest
+  /voice/api/v1/cpaas/calls/DTMF:
+    post:
+      application/json: CallingControllerDtmfRequest
+  /voice/api/v1/cpaas/calls/Hold:
+    post:
+      application/json: CallingControllerHoldRequest
+  /voice/api/v1/cpaas/calls/UnHold:
+    post:
+      application/json: CallingControllerUnHoldRequest
+  /voice/api/v1/cpaas/calls/answerAndPark:
+    post:
+      application/json: CallingControllerAnswerAndParkRequest
+  /voice/api/v1/cpaas/calls/callAndConnect:
+    post:
+      application/json: CallingControllerCallsAndConnectRequest
+  /voice/api/v1/cpaas/calls/callAndMerge:
+    post:
+      application/json: CallingControllerCallAndMergeRequest
+  /voice/api/v1/cpaas/calls/callAndMonitor:
+    post:
+      application/json: CallingControllerCallAndMonitorRequest
+  /voice/api/v1/cpaas/calls/callAndPlay:
+    post:
+      application/json: CallingControllerCallAndPlayRequest
+  /voice/api/v1/cpaas/calls/callAndSpeak:
+    post:
+      application/json: CallingControllerCallAndSpeakRequest
+  /voice/api/v1/cpaas/calls/hungup:
+    post:
+      application/json: CallingControllerHungupRequest
+  /voice/api/v1/cpaas/calls/merge:
+    post:
+      application/json: CallingControllerMergeRequest
+  /voice/api/v1/cpaas/calls/mute:
+    post:
+      application/json: CallingControllerMutedRequest
+  /voice/api/v1/cpaas/calls/playAudioEndless:
+    post:
+      application/json: CallingControllerPlayAudioEndlessRequest
+  /voice/api/v1/cpaas/calls/playAudioStop:
+    post:
+      application/json: CallingControllerPlayAudioStopRequest
+  /voice/api/v1/cpaas/calls/speakAudio:
+    post:
+      application/json: CallingControllerSpeakAudioRequest
+  /voice/api/v1/cpaas/calls/startRecording:
+    post:
+      application/json: CallingControllerStartRecordingRequest
+  /voice/api/v1/cpaas/calls/stopRecording:
+    post:
+      application/json: CallingControllerStopRecordingRequest
+  /voice/api/v1/cpaas/calls/unmute:
+    post:
+      application/json: CallingControllerUnmutedRequest
+  /voice/api/v1/cpaas/calls/voicemail:
+    post:
+      application/json: CallingControllerVoicemailRequest
+responseDescriptions: {}
+responseSchemaNames:
+  /api/authentication/webhook:
+    post:
+      '200':
+        '*/*': EmailResponseResponse
+  /email/api/v1/dashboard/hour/{id}:
+    post:
+      '200':
+        '*/*': EmailHourlySmsResponse
+  /email/api/v1/dashboard/{id}:
+    post:
+      '200':
+        '*/*': EmailReportResponse
+  /email/api/v1/reporting/download/{id}:
+    get:
+      '200':
+        '*/*': EmailDownloadMethodResponse
+  /email/api/v1/reporting/{id}:
+    post:
+      '200':
+        '*/*': EmailReportingResponse
+  /email/api/v1/summary/download/{id}:
+    get:
+      '200':
+        '*/*': EmailSummaryMethodResponse
+  /email/api/v1/summary/{id}:
+    post:
+      '200':
+        '*/*': EmailSummaryResponse
+  /sms/api/v1/accounting:
+    post:
+      '200':
+        '*/*': SmsProfileAccountingResponse
+  /sms/api/v1/accounting/update:
+    put:
+      '200':
+        '*/*': SmsUpdateAccountProfileResponse
+  /sms/api/v1/block/retrieve/numbers:
+    post:
+      '200':
+        '*/*': SmsBlockMultipleRetreivingNumberResponse
+  /sms/api/v1/block/upload/numbers:
+    post:
+      '200':
+        '*/*': SmsBlockMultipleNumberResponse
+  /sms/api/v1/credit/logs:
+    post:
+      '200':
+        '*/*': SmsCreditLogsResponse
+  /sms/api/v1/date/statistic:
+    post:
+      '200':
+        '*/*': SmsDatewiseStatisticResponse
+  /sms/api/v1/descriptive/summary:
+    post:
+      '200':
+        '*/*': SmsDescriptiveSummaryResponse
+  /sms/api/v1/download/center:
+    post:
+      '200':
+        '*/*': SmsDownloadCentreResponse
+  /sms/api/v1/jobsummary:
+    post:
+      '200':
+        '*/*': SmsJobsSummaryResponse
+  /sms/api/v1/month/statistic:
+    post:
+      '200':
+        '*/*': SmsMonthlyStatisticResponse
+  /sms/api/v1/profile:
+    post:
+      '200':
+        '*/*': SmsProfileDetailResponse
+  /sms/api/v1/retreive/download/center:
+    post:
+      '200':
+        '*/*': SmsRetrieveDownloadCenterResponse
+  /sms/api/v1/sender/block:
+    post:
+      '200':
+        '*/*': SmsBlockSenderResponse
+  /sms/api/v1/sender/manage:
+    post:
+      '200':
+        '*/*': SmsManageSenderResponse
+  /sms/api/v1/sender/statistic:
+    post:
+      '200':
+        '*/*': SmsSenderStatisticResponse
+  /sms/api/v1/update/profile:
+    put:
+      '200':
+        '*/*': SmsUpdateProfileDetailsResponse
+  /whatsapp/api/v1/dashboard:
+    post:
+      '200':
+        '*/*': WhatsappSummarizeServiceResponse
+  /whatsapp/api/v1/hour/dashboard:
+    post:
+      '200':
+        '*/*': WhatsappSummaryMonthServiceResponse
+  /whatsapp/api/v1/report:
+    post:
+      '200':
+        '*/*': WhatsappReportingResponse
+  /whatsapp/api/v1/retreive/template:
+    post:
+      '200':
+        '*/*': WhatsappRetreivingTemplateResponse
+  /whatsapp/api/v1/summary:
+    post:
+      '200':
+        '*/*': WhatsappSummaryServiceResponse
+  /whatsapp/api/v1/summary/monthly/download:
+    get:
+      '200':
+        '*/*': WhatsappBulkJobResponse
+  /whatsapp/api/v1/whatsapp/log/download:
+    get:
+      '200':
+        '*/*': WhatsappLogsResponse
+securityParameters:
+  Host:
+    header: false
+  X-TENANT-ID:
+    header: false
+  access-key:
+    header: false
+  attach:
+    query: false
+  bcc:
+    query: false
+  campaign:
+    query: false
+  campaign_end_time:
+    query: false
+  campaign_end_time__gte:
+    query: false
+  campaign_end_time__lte:
+    query: false
+  campaign_start_time:
+    query: false
+  campaign_start_time__gte:
+    query: false
+  campaign_start_time__lte:
+    query: false
+  cc:
+    query: false
+  channel:
+    query: false
+  date:
+    query: false
+  intent:
+    query: false
+  limit:
+    query: false
+  message_id:
+    query: false
+  message_type:
+    query: false
+  mobile:
+    query: false
+  name__contains:
+    query: false
+  offset:
+    query: false
+  orderBy:
+    query: false
+  ordering:
+    query: false
+  page_no:
+    query: false
+  phone_number:
+    query: false
+  phone_number__contains:
+    query: false
+  received_time:
+    query: false
+  received_time__gte:
+    query: false
+  received_time__lte:
+    query:
+      in: query
+      name: received_time__lte
+      securityName: 'n'
+      type: apiKey
+  search:
+    query: false
+  sender:
+    query: false
+  sender__contains:
+    query: false
+  sent_time:
+    query: false
+  sent_time__gte:
+    query: false
+  sent_time__lte:
+    query: false
+  state:
+    query: false
+  status:
+    query: false
+  template_name:
+    query: false
+validServerUrls:
+  https://{host-domain}:
+    url: https://api.tubelightcommunications.com

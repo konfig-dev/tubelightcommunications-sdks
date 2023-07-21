@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://unpkg.com/konfig-lib@latest/konfig-yaml.schema.json
+
+outputDirectory: /tmp/tubelightcommunications-sdks-out
+specInputPath: cpaas_schema.json
+specPath: api.json
+generators:
+  java:
+    version: 1.0.0
+    groupId: com.tubelightcommunications
+    artifactId: tubelightcommunications-java-sdk
+    clientName: Tubelightcommunications
+    outputDirectory: java
+    git:
+      userId: konfig-dev
+      repoId: tubelightcommunications-sdks/tree/main/java
+  python:
+    version: 1.0.0
+    packageName: tubelightcommunications_client
+    projectName: tubelightcommunications-python-sdk
+    outputDirectory: python
+    clientName: Tubelightcommunications
+    git:
+      userId: konfig-dev
+      repoId: tubelightcommunications-sdks/tree/main/python
+  php:
+    disabled: true
+    version: 1.0.0
+    packageName: tubelightcommunications-php
+    outputDirectory: php
+    invokerPackage: Tubelightcommunications
+    git:
+      userId: konfig-dev
+      repoId: tubelightcommunications-sdks/tree/main/php
